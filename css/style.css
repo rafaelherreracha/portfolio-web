@@ -1,14 +1,20 @@
 :root {
-    --bg-dark: #121212;
-    --accent: #10b981; /* Tu color verde */
-    --text-white: #ffffff;
-}
+    /* Fondos */
+    --bg-dark: #0f172a;       /* Un azul marino muy oscuro para el fondo principal */
+    --bg-card: #1e293b;       /* Un tono azulado un poco más claro para las tarjetas */
+    
+    /* El nuevo Azul de Acento */
+    --accent: #38bdf8;        /* Azul brillante (estilo Sky Blue) para resaltar */
+    --accent-hover: #0ea5e9;  /* Un azul un poco más oscuro para cuando pases el ratón */
+    
+    /* Textos */
+    --text-white: #f8fafc;
+    --text-muted: #94a3b8;
+}   
 
 body {
-    background-color: var(--bg-dark);
     color: var(--text-white);
     margin: 0;
-    padding-top: 80px; 
     font-family: sans-serif;
 }
 
@@ -17,9 +23,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #1a1a1a;
+    /* Eliminamos el color sólido y usamos un fondo transparente o con ligero desenfoque */
+    background-color: rgba(10, 10, 10, 0.3); 
+    backdrop-filter: blur(8px); /* Esto da el toque aesthetic de cristal */
     z-index: 1000;
     padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea muy fina */
 }
 
 .nav-container {
@@ -45,12 +54,20 @@ body {
 }
 
 /* --- HERO SECTION --- */
+
 .hero {
-    height: calc(100vh - 80px); 
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding: 0 10%;
+    
+    /* Fondo negro base + tu imagen con un degradado para que el texto resalte */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../assets/img/background.jpg');
+    background-color: #000; /* Fondo de seguridad negro */
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .main-name {
@@ -61,16 +78,20 @@ body {
 }
 
 .first-name {
-    font-size: 6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 5rem;
     font-weight: 900;
-    color: var(--text-white); 
+    color: var(--text-white);
+    letter-spacing: -2px; /* Toque moderno */
 }
 
 .last-name {
-    font-size: 6rem;
-    font-weight: 200;
-    color: var(--text-white);
-    font-family: serif; 
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-style: italic; /* Estilo elegante */
+    font-weight: 400;
+    color: var(--accent); /* Aquí aplicamos tu azul favorito */
+    margin-top: -10px; /* Las pegamos un poco más */
 }
 
 .hero-role {
