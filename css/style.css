@@ -205,3 +205,130 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/** Projects section*/
+
+.projects-section {
+    padding: 80px 10%;
+    background-color: #161616; /* Un tono ligeramente distinto para separar secciones */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se ajusta solo según el tamaño de pantalla */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* La tarjeta sube un poco */
+    border-color: var(--accent); /* El borde se ilumina con tu verde */
+}
+
+.project-info {
+    padding: 2rem;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-white);
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-tags span {
+    font-size: 0.75rem;
+    background-color: #252525;
+    color: var(--accent);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+}
+
+.project-link {
+    text-decoration: none;
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--accent);
+    transition: letter-spacing 0.3s;
+}
+
+.project-link:hover {
+    letter-spacing: 1px;
+}
+
+/* Footer*/
+
+.main-footer {
+    background-color: #0d0d0d; /* Un tono más oscuro que el resto */
+    padding: 80px 10% 40px 10%;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+.footer-text {
+    color: #888;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.social-item {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.social-item:hover {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 2rem;
+    color: #444;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
