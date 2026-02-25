@@ -132,14 +132,76 @@ body {
     font-weight: 300;
 }
 
-.about-content h3 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
+
 
 .about-content p {
     max-width: 800px; /* Evita que las líneas de texto sean demasiado largas y difíciles de leer */
     line-height: 1.8;
     color: #ccc;
     margin-bottom: 2rem;
+}
+
+/* Resume Section*/
+.resume-section {
+    padding: 80px 10%;
+    background-color: var(--bg-dark);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+/* La magia del Grid de 3 columnas */
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 3rem;
+}
+
+.resume-block {
+    margin-bottom: 2.5rem;
+}
+
+.resume-block h3 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.skill-list, .cert-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li, .cert-list li {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.date {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin: 5px 0;
+}
+
+.exp-item h4, .edu-item h4 {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Ajuste para móviles: pasa de 3 columnas a 1 */
+@media (max-width: 900px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
 }
