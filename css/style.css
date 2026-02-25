@@ -1,0 +1,145 @@
+:root {
+    --bg-dark: #121212;
+    --accent: #10b981; /* Tu color verde */
+    --text-white: #ffffff;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    margin: 0;
+    padding-top: 80px; 
+    font-family: sans-serif;
+}
+
+/* --- HEADER --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 10%;
+    gap: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-menu a, .btn-nav {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: calc(100vh - 80px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.main-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.8;
+    margin: 0;
+}
+
+.first-name {
+    font-size: 6rem;
+    font-weight: 900;
+    color: var(--text-white); 
+}
+
+.last-name {
+    font-size: 6rem;
+    font-weight: 200;
+    color: var(--text-white);
+    font-family: serif; 
+}
+
+.hero-role {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    margin: 2rem 0;
+    color: var(--text-white);
+}
+
+/* --- BOTONES --- */
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: black;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.hero-quote {
+    font-style: italic;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+/*About Section*/
+.about-section {
+    padding: 100px 10%; /* Espacio interno para que respire la sección */
+    background-color: var(--bg-dark);
+}
+
+.about-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: inline-block; /* Para que el borde solo ocupe el ancho del texto */
+    border-bottom: 4px solid var(--accent); /* El subrayado que pediste */
+    padding-bottom: 5px;
+}
+
+.about-email {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 80px; /* EL ESPACIO GRANDE: separa el correo del "Sobre mí" */
+    font-weight: 300;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    max-width: 800px; /* Evita que las líneas de texto sean demasiado largas y difíciles de leer */
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
