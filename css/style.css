@@ -1,16 +1,20 @@
 :root {
-    /* Fondos */
-    --bg-dark: #0f172a;       /* Un azul marino muy oscuro para el fondo principal */
-    --bg-card: #1e293b;       /* Un tono azulado un poco más claro para las tarjetas */
+    /* Fondos de sección */
+    --bg-dark: #050810;       
+    --bg-resume: #0a1120;     
+    --bg-projects: #0f172a;   
     
-    /* El nuevo Azul de Acento */
-    --accent: #38bdf8;        /* Azul brillante (estilo Sky Blue) para resaltar */
-    --accent-hover: #0ea5e9;  /* Un azul un poco más oscuro para cuando pases el ratón */
+    /* Elementos destacados  */
+    --bg-card: #1e293b;       
     
-    /* Textos */
+    /* Colores de acento */
+    --accent: #38bdf8;        
+    --accent-glow: rgba(56, 189, 248, 0.3); 
     --text-white: #f8fafc;
-    --text-muted: #94a3b8;
-}   
+}
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     color: var(--text-white);
@@ -23,12 +27,11 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    /* Eliminamos el color sólido y usamos un fondo transparente o con ligero desenfoque */
     background-color: rgba(10, 10, 10, 0.3); 
-    backdrop-filter: blur(8px); /* Esto da el toque aesthetic de cristal */
+    backdrop-filter: blur(8px); 
     z-index: 1000;
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea muy fina */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .nav-container {
@@ -61,10 +64,9 @@ body {
     align-items: center;
     padding: 0 10%;
     
-    /* Fondo negro base + tu imagen con un degradado para que el texto resalte */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                 url('../assets/img/background.jpg');
-    background-color: #000; /* Fondo de seguridad negro */
+    background-color: #000; 
     background-size: cover;
     background-position: center;
     position: relative;
@@ -82,16 +84,16 @@ body {
     font-size: 5rem;
     font-weight: 900;
     color: var(--text-white);
-    letter-spacing: -2px; /* Toque moderno */
+    letter-spacing: -2px; 
 }
 
 .last-name {
     font-family: 'Playfair Display', serif;
     font-size: 5rem;
-    font-style: italic; /* Estilo elegante */
+    font-style: italic; 
     font-weight: 400;
-    color: var(--accent); /* Aquí aplicamos tu azul favorito */
-    margin-top: -10px; /* Las pegamos un poco más */
+    color: var(--accent); 
+    margin-top: -10px; 
 }
 
 .hero-role {
@@ -132,8 +134,13 @@ body {
 }
 
 /*About Section*/
+
+.about-text {
+    margin-bottom: 40px; /* Separa el párrafo del botón */
+}
+
 .about-section {
-    padding: 100px 10%; /* Espacio interno para que respire la sección */
+    padding: 100px 10%; 
     background-color: var(--bg-dark);
 }
 
@@ -141,89 +148,185 @@ body {
     font-size: 3rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
-    display: inline-block; /* Para que el borde solo ocupe el ancho del texto */
-    border-bottom: 4px solid var(--accent); /* El subrayado que pediste */
+    display: inline-block; 
+    border-bottom: 4px solid var(--accent); 
     padding-bottom: 5px;
 }
 
 .about-email {
-    font-size: 1.2rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
     color: var(--accent);
-    margin-bottom: 80px; /* EL ESPACIO GRANDE: separa el correo del "Sobre mí" */
-    font-weight: 300;
-}
-
-
-
-.about-content p {
-    max-width: 800px; /* Evita que las líneas de texto sean demasiado largas y difíciles de leer */
-    line-height: 1.8;
-    color: #ccc;
-    margin-bottom: 2rem;
-}
-
-/* Resume Section*/
-.resume-section {
-    padding: 80px 10%;
-    background-color: var(--bg-dark);
-}
-
-.section-title {
-    font-size: 2.5rem;
-    border-bottom: 3px solid var(--accent);
-    display: inline-block;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-}
-
-/* La magia del Grid de 3 columnas */
-.resume-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-    gap: 3rem;
-}
-
-.resume-block {
-    margin-bottom: 2.5rem;
-}
-
-.resume-block h3 {
-    font-size: 1.2rem;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 60px;
     letter-spacing: 1px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
 }
 
-.skill-list, .cert-list {
+/* Texto principal: Estilo "Data Report" */
+.about-content p {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    max-width: 800px;
+    text-align: justify;
+    position: relative;
+    padding-left: 20px;
+    border-left: 1px solid rgba(56, 189, 248, 0.3); /* Línea vertical sutil */
+}
+
+/* Resalte de palabras clave dentro del texto */
+.about-content p strong {
+    color: #ffffff;
+    background-color: rgba(56, 189, 248, 0.15); /* Azul muy sutil de fondo */
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+}
+.about-action {
+    margin-top: 50px; /* Crea el espacio que querías */
+    padding-left: 20px; /* Lo alinea con la línea vertical azul */
+}
+.btn-contact {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid var(--accent); /* El recuadro azul */
+    color: var(--text-white);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-contact:hover {
+    background-color: var(--accent);
+    color: #000; /* Letras negras al pasar el ratón */
+    box-shadow: 0 0 15px var(--accent-glow); /* Efecto de brillo azul */
+}
+
+
+/* --- RESUME SECTION (Corrección de visibilidad) --- */
+.resume-section {
+    padding: 100px 10%;
+    background-color: var(--bg-dark); /* Asegúrate de que esto sea #050810 */
+    color: #ffffff; /* Forzamos que todo el texto base sea blanco */
+    overflow: hidden;
+}
+
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.2fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+/* Títulos de las columnas en AZUL */
+.resume-column h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--accent); /* Tu azul cyan */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+    border-left: 3px solid var(--accent);
+    padding-left: 15px;
+}
+
+/* --- TIMELINE (Línea de tiempo) --- */
+.timeline {
+    position: relative;
+    border-left: 1px solid rgba(56, 189, 248, 0.3); /* Línea vertical azul tenue */
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+/* El punto azul brillante */
+.timeline-dot {
+    position: absolute;
+    left: -36px; 
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent); /* Efecto neón */
+    z-index: 2;
+}
+
+.timeline-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 5px 0;
+    color: #ffffff; /* Nombre del puesto en blanco puro */
+}
+
+.timeline-item .company {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent); /* Empresa en azul */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.timeline-item .date {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: #94a3b8; /* Fecha en gris claro para que no compita */
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    font-size: 0.9rem;
+    color: #cbd5e1; /* Descripción en gris muy claro */
+    line-height: 1.6;
+}
+
+/* --- SKILLS LIMPIAS --- */
+.clean-skill-list {
     list-style: none;
     padding: 0;
 }
 
-.skill-list li, .cert-list li {
-    margin-bottom: 0.5rem;
-    color: #ccc;
+.clean-skill-list li {
+    margin-bottom: 18px;
     font-size: 0.95rem;
+    color: #ffffff; /* Texto de la skill en blanco */
+    display: flex;
+    align-items: center;
 }
 
-.date {
-    display: block;
-    font-size: 0.8rem;
-    color: var(--accent);
-    margin: 5px 0;
+.clean-skill-list li strong {
+    color: var(--accent); /* El nombre de la categoría en azul */
+    margin-right: 8px;
 }
 
-.exp-item h4, .edu-item h4 {
-    font-size: 1rem;
-    margin-top: 1rem;
+/* El punto pequeño al lado de cada skill */
+.clean-skill-list li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    margin-right: 15px;
+    opacity: 0.8;
 }
 
-/* Ajuste para móviles: pasa de 3 columnas a 1 */
-@media (max-width: 900px) {
-    .resume-grid {
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .resume-container {
         grid-template-columns: 1fr;
+        gap: 3rem;
     }
 }
 
@@ -231,12 +334,12 @@ body {
 
 .projects-section {
     padding: 80px 10%;
-    background-color: #161616; /* Un tono ligeramente distinto para separar secciones */
+    background-color: #161616; 
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se ajusta solo según el tamaño de pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -250,8 +353,8 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-10px); /* La tarjeta sube un poco */
-    border-color: var(--accent); /* El borde se ilumina con tu verde */
+    transform: translateY(-10px); 
+    border-color: var(--accent); 
 }
 
 .project-info {
@@ -303,7 +406,7 @@ body {
 /* Footer*/
 
 .main-footer {
-    background-color: #0d0d0d; /* Un tono más oscuro que el resto */
+    background-color: #0d0d0d; 
     padding: 80px 10% 40px 10%;
     text-align: center;
     border-top: 1px solid #333;

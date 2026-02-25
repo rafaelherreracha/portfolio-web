@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="assets/img/">
     <title>RafaelHerrera/portfolio</title>
 </head>
 <body>
@@ -46,95 +47,78 @@
             <p class="about-email">rafaelherreracha@gmail.com</p> 
             
             <div class="about-content">
-                <p>
-                    Soy un desarrollador de software con experiencia en desarrollo web, actualmente especializándome 
-                    en el mundo de la ciberseguridad. Para complementar mi perfil técnico, me encuentro cursando 
-                    ASIR (Administración de Sistemas Informáticos en Red) junto con un Máster en Ciberseguridad.
-
-                    Me considero un apasionado por la tecnología, con una mentalidad proactiva y orientada al 
-                    aprendizaje continuo. Cuento con habilidades sólidas en programación, resolución de problemas
-                    y trabajo en equipo. Busco oportunidades para aplicar mis conocimientos en entornos reales, 
-                    contribuir a la protección de sistemas y seguir desarrollándome como profesional en el ámbito de la seguridad informática.
+                <p class="about-text">
+                    Soy un <strong>desarrollador de software</strong> con experiencia en <strong>desarrollo web</strong>, 
+                    actualmente especializándome en el mundo de la <strong>ciberseguridad</strong>. 
+                    Para complementar mi perfil técnico, me encuentro cursando <strong>ASIR</strong> 
+                    (Administración de Sistemas Informáticos en Red) junto con un <strong>Máster en Ciberseguridad</strong>.
+                    <br><br>
+                    Me considero un apasionado por la tecnología, con una <strong>mentalidad proactiva</strong> 
+                    y orientada al aprendizaje continuo. Cuento con habilidades sólidas en <strong>programación</strong>, 
+                    resolución de problemas y trabajo en equipo. Busco oportunidades para aplicar mis conocimientos 
+                    en entornos reales, contribuir a la <strong>protección de sistemas</strong> y seguir desarrollándome 
+                    como profesional en el ámbito de la <strong>seguridad informática</strong>.
                 </p>
                 
-                <a href="#contacto" class="btn-secondary">Contact me</a> 
+                <div class="about-action">
+                    <a href="#contacto" class="btn-contact">Contact me</a>
+                </div>
             </div>
         </section>
 
         <section id="resume" class="resume-section">
             <h2 class="section-title">Resume</h2>
 
-            <div class="resume-grid">
+            <div class="resume-container">
                 
                 <div class="resume-column">
                     <div class="resume-block">
-                        <h3>Cyber & SysAdmin Skills</h3>
-                        <ul class="skill-list">
-                            <li>Sistemas: Windows / Linux Admin</li>
-                            <li>Redes: LAN/WAN, DNS, DHCP, AD</li>
-                            <li>Virtualización: VMware, VirtualBox</li>
-                            <li>Scripting: PowerShell, Bash</li>
+                        <h3>Technical Skills</h3>
+                        <ul class="clean-skill-list">
+                            <li><span class="dot"></span> <strong>Cyber:</strong> SIEM, Red Team, SOC</li>
+                            <li><span class="dot"></span> <strong>Systems:</strong> Linux/Windows Admin</li>
+                            <li><span class="dot"></span> <strong>Dev:</strong> Java, Python, PHP, SQL</li>
+                            <li><span class="dot"></span> <strong>Tools:</strong> Git, Docker, VMware</li>
                         </ul>
                     </div>
-
-                    <div class="resume-block">
-                        <h3>Software Skills</h3>
-                        <ul class="skill-list">
-                            <li>Java, Python, JS, PHP, SQL</li>
-                            <li>Spring, Laravel, React</li>
-                            <li>Maven, JUnit 5, Mockito</li>
-                            <li>Git / GitHub</li>
-                        </ul>
-                    </div>
-
+                    
                     <div class="resume-block">
                         <h3>Languages</h3>
-                        <p>Inglés: Nivel B1 Avanzado (Experiencia en UK)</p>
+                        <ul class="clean-skill-list">
+                            <li><span class="dot"></span> Inglés - B1 Avanzado</li>
+                            <li><span class="dot"></span> Español - Nativo</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="resume-column">
-                    <div class="resume-block">
-                        <h3>Experience</h3>
-                        <div class="exp-item">
-                            <h4>Programador Junior | NTT DATA</h4>
+                    <h3>Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
                             <span class="date">2021 - 2023</span>
-                            <p>Desarrollo Java/Spring, Hibernate y pruebas unitarias con Mockito. Desarrollo Frontend y Backend con Laravel.</p>
+                            <h4>Programador Junior</h4>
+                            <span class="company">NTT DATA</span>
+                            <p>Desarrollo Java/Spring y Ciberseguridad aplicada al código.</p>
                         </div>
-                    </div>
-
-                    <div class="resume-block">
-                        <h3>Certifications</h3>
-                        <ul class="cert-list">
-                            <li>Google Cybersecurity Professional</li>
-                            <li>Cisco CCST Cybersecurity</li>
-                            <li>TheBridge: Red Team (250h)</li>
-                            <li>TheBridge: SOC Analyst (50h)</li>
-                        </ul>
-                    </div>
+                        </div>
                 </div>
 
                 <div class="resume-column">
-                    <div class="resume-block">
-                        <h3>Education</h3>
-                        <div class="edu-item">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="date">2024 - Present</span>
                             <h4>ASIR + Máster Ciberseguridad</h4>
-                            <span class="date">En curso (2025) | Prometeo</span>
+                            <span class="company">Prometeo</span>
                         </div>
-                        <div class="edu-item">
-                            <h4>GS Desarrollo de Aplicaciones Web</h4>
-                            <span class="date">2021 - 2023 | Cesur</span>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="date">2021 - 2023</span>
+                            <h4>DAW (Grado Superior)</h4>
+                            <span class="company">Cesur Cartuja</span>
                         </div>
-                    </div>
-
-                    <div class="resume-block">
-                        <h3>Soft Skills</h3>
-                        <ul class="skill-list">
-                            <li>Capacidad analítica</li>
-                            <li>Comunicación técnica</li>
-                            <li>Pensamiento crítico</li>
-                            <li>Resolución de problemas</li>
-                        </ul>
                     </div>
                 </div>
 
@@ -188,7 +172,7 @@
 
             <div class="social-links">
                 <a href="https://github.com/tu-usuario" target="_blank" class="social-item">GitHub</a>
-                <a href="https://linkedin.com/in/rafaelherreracha" target="_blank" class="social-item">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/rafaelherrerachavez/" target="_blank" class="social-item">LinkedIn</a>
                 <a href="mailto:rafaelherreracha@gmail.com" class="social-item">Email</a>
             </div>
 
@@ -197,6 +181,6 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>
